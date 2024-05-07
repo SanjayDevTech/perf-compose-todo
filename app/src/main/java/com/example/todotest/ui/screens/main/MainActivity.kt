@@ -7,11 +7,15 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -19,6 +23,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -52,23 +57,37 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 ) { paddingValues ->
-                    LazyColumn(
+                    Column(
                         modifier = Modifier
                             .padding(paddingValues)
-                            .padding(horizontal = 16.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                            .fillMaxSize(),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
                     ) {
-                        items(todos, key = { it.id }) { todo ->
-                            TodoItem(todo = todo, onDelete = {
-                                viewModel.deleteTodo(todo)
-                            }) {
-                                val intent = Intent(context, DetailActivity::class.java).apply {
-                                    putExtra("id", todo.id)
+                        if (todos.isEmpty()) {
+                            Text(text = "No records available")
+                        } else {
+                            LazyColumn(
+                                modifier = Modifier
+                                    .padding(horizontal = 16.dp)
+                                    .fillMaxSize(),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                items(todos, key = { it.id }) { todo ->
+                                    TodoItem(todo = todo, onDelete = {
+                                        viewModel.deleteTodo(todo)
+                                    }) {
+                                        val intent =
+                                            Intent(context, DetailActivity::class.java).apply {
+                                                putExtra("id", todo.id)
+                                            }
+                                        startActivity(intent)
+                                    }
                                 }
-                                startActivity(intent)
                             }
                         }
                     }
+
                 }
             }
         }
