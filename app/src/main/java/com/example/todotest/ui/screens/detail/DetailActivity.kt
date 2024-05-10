@@ -51,7 +51,7 @@ class DetailActivity : ComponentActivity() {
             }
             TodoTestTheme {
                 Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
-                    TopAppBar(title = { Text(text = "Detail") }, navigationIcon = {
+                    TopAppBar(title = { Text(text = if (isEditMode) "Update Todo" else "Add Todo") }, navigationIcon = {
                         IconButton(onClick = this@DetailActivity::finish) {
                             Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                         }
