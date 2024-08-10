@@ -1,4 +1,4 @@
-package com.example.todotest.ui.theme
+package com.android.todo.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

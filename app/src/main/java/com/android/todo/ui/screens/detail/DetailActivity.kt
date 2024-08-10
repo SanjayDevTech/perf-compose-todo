@@ -1,4 +1,4 @@
-package com.example.todotest.ui.screens.detail
+package com.android.todo.ui.screens.detail
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -29,7 +29,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.todotest.ui.theme.TodoTestTheme
+import com.android.todo.ui.theme.TodoTestTheme
 
 
 class DetailActivity : ComponentActivity() {

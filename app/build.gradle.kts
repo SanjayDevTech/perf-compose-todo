@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
-    namespace = "com.example.todotest"
+    namespace = "com.android.todo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.todotest"
+        applicationId = "com.android.todo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -42,14 +43,15 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.13"
-    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+}
+
+composeCompiler {
+    enableStrongSkippingMode = true
 }
 
 dependencies {

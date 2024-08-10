@@ -1,12 +1,12 @@
 [versions]
-agp = "8.4.0"
-kotlin = "1.9.23"
+agp = "8.5.2"
+kotlin = "2.0.10"
 coreKtx = "1.13.1"
-lifecycle = "2.7.0"
-activityCompose = "1.9.0"
-composeBom = "2024.05.00"
+lifecycle = "2.8.4"
+activityCompose = "1.9.1"
+composeBom = "2024.06.00"
 room = "2.6.1"
-ksp = "1.9.23-1.0.20"
+ksp = "2.0.10-1.0.24"
 material = "1.12.0"
 
 [libraries]
@@ -31,3 +31,4 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

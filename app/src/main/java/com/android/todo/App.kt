@@ -1,8 +1,8 @@
-package com.example.todotest
+package com.android.todo
 
 import android.app.Application
 import androidx.room.Room
-import com.example.todotest.data.AppDatabase
+import com.android.todo.data.AppDatabase
 
 class App : Application() {
     val db by lazy {

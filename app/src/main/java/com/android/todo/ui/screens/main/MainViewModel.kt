@@ -1,12 +1,12 @@
-package com.example.todotest.ui.screens.main
+package com.android.todo.ui.screens.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
-import com.example.todotest.App
-import com.example.todotest.data.TodoDao
-import com.example.todotest.data.TodoEntity
+import com.android.todo.App
+import com.android.todo.data.TodoDao
+import com.android.todo.data.TodoEntity
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch

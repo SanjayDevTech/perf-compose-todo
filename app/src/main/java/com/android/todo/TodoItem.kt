@@ -1,4 +1,4 @@
-package com.example.todotest
+package com.android.todo
 
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -24,7 +24,7 @@ import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
-import com.example.todotest.data.TodoEntity
+import com.android.todo.data.TodoEntity
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
