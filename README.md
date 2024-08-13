@@ -4,7 +4,7 @@ I have created the same Todo app in different frameworks.
 This is one of them.
 
 ## All frameworks github links:
-- [Android Compose](https://github.com/SanjayDevTech/perf-android-compose-todo)
+- [Android Compose](https://github.com/SanjayDevTech/perf-compose-todo)
 - [Flutter](https://github.com/SanjayDevTech/perf-flutter-todo)
 - [React Native](https://github.com/SanjayDevTech/perf-reactnative-todo)
 
@@ -29,5 +29,5 @@ This is one of them.
 - First change build variant to release (There should be a option in Android Studio somewhere).
 - Then Menu > Build > Build APKS / AABs.
 
-https://github.com/SanjayDevTech/perf-android-compose-todo/assets/49263351/8a9037f5-a90e-4858-9879-10e61cceff76
+https://github.com/SanjayDevTech/perf-compose-todo/assets/49263351/8a9037f5-a90e-4858-9879-10e61cceff76
 
